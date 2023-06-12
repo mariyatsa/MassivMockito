@@ -15,31 +15,7 @@ public class MovieManagerTest {
     }
 
     @Test
-    public void AddAnything() {
-        MovieManager manager = new MovieManager();
-        manager.addendum("Комедия");
-        manager.addendum("Трейлер");
-
-        String[] expected = {"Комедия", "Трейлер"};
-        String[] actual = manager.findAll();
-
-        Assert.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void addedMovies() {
-        MovieManager manager = new MovieManager();
-        manager.addendum("Комедия");
-        manager.addendum("Трейлер");
-
-        String[] expected = {"Комедия", "Трейлер"};
-        String[] actual = manager.findAll();
-
-        Assert.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void addedMovies3() {
+    public void addedMovies4() { // добавлено фильмов
         MovieManager manager = new MovieManager();
         manager.addendum("Комедия");
         manager.addendum("Трейлер");
@@ -53,7 +29,7 @@ public class MovieManagerTest {
     }
 
     @Test
-    public void showTheSavedOnes() {
+    public void showTheSavedOnes() { // показать Сохраненные
         MovieManager manager = new MovieManager();
         manager.addendum("Комедия");
         manager.addendum("Трейлер");
@@ -66,7 +42,7 @@ public class MovieManagerTest {
     }
 
     @Test
-    public void outputOfSavedMoviesInReverseOrder() {
+    public void outputOfSavedMoviesInReverseOrderLimit2() { // вывод Сохраненных Фильмов В Обратном Порядке Ограничение 2
         MovieManager manager = new MovieManager(2);
         manager.addendum("Комедия");
         manager.addendum("Трейлер");
@@ -79,7 +55,7 @@ public class MovieManagerTest {
     }
 
     @Test
-    public void limit5() {
+    public void outputOfSavedMoviesWithoutLimit() { // вывод сохраненных фильмов без лимита
         MovieManager manager = new MovieManager();
         manager.addendum("Поттер часть 1");
         manager.addendum("Поттер часть 2");
